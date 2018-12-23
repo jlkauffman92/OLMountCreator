@@ -57,10 +57,22 @@ $(document).ready(function(){
 
 function generatePDF() {
     var pdf = new jsPDF('p', 'pt', 'a4');
+    var margins = {
+        top: 40,
+        bottom: 60,
+        left: 40,
+        width: 522,
+    }
     pdf.setFontSize(18);
-    pdf.fromHTML(document.getElementById('output'));
-    pdf.setProperties({
-        title: $('input[name="name"]').val()
-    });
-    pdf.save($('input[name="name"]').val());
+    pdf.fromHTML(document.getElementById('output'),
+        margins.left,
+        margins.top, {
+            width: margins.width
+        },
+        function(dispose) {
+            pdf.save($('input[name="name"]').val() + ".pdf");
+        },
+        margins
+    );
+
 }
