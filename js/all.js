@@ -24,7 +24,7 @@ $(document).ready(function(){
         $('#feats').html(" " + feats);
 
         var hp = $('input[name="hp"]').val();
-        $('#hp').html(hp);
+        $('#hp').html(" " + hp);
 
         var dt = $('input[name="dt"]').val();
         $('#dt').html(" " + dt);
