@@ -2,6 +2,17 @@ $(document).ready(function(){
     $('#download').click(function(){
         generatePDF();
     });
+
+    $('#rulesBtn').click(function(){
+        $(this).hide();
+        $('#iframe').show();
+
+    });
+
+    $('#hide').click(function(){
+        $('#iframe').hide();
+        $('#rulesBtn').show();
+    })   
     $('#form').on('input', function(){
         $('#output').show();
 
