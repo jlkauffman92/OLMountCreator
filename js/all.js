@@ -65,6 +65,9 @@ $(document).ready(function(){
         else{
             $('#resolve').html(' Immune');
         }
+
+        var notes = $('textarea[name="notes"]').val();
+        $('#notes').html(" " + notes);
     });
 });
 

@@ -41,6 +41,8 @@
                     <input class="form-control" type="number" name="toughness">
                     <label for="resolve">Resolve:</label>
                     <input class="form-control" type="number" name="resolve">
+                    <label for="notes">Notes/Description:</label>
+                    <textarea class="form-control" name="notes" rows="4" cols="50"></textarea>
             </div>
             <div class="col-sm-6">
                 <div id="output">
@@ -56,6 +58,8 @@
                     <div>Guard:<span id='guard'></span></div>
                     <div>Toughness:<span id='toughness'></span></div>
                     <div>Resolve:<span id='resolve'></span></div>
+                    <div>Notes:<span id="notes"></span></div>
+                    
                 </div>
                 <br/>
                 <input type='button' id="download" onclick="generatePDF()" value='Download PDF'>
@@ -65,7 +69,7 @@
                 </div>
                 <div style="display: none" id="iframe">
                     <a id="hide" href="#">Hide</a>
-                <iframe src="https://openlegendrpg.com/core-rules/09-special-equipment#mounts-vehicles" width="100%" height="430px"></iframe>
+                <iframe src="https://openlegendrpg.com/core-rules/09-special-equipment#mounts-vehicles" width="100%" height="480px"></iframe>
                 </div>
             </div>
         </div>
