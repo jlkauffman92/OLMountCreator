@@ -1,8 +1,4 @@
 $(document).ready(function(){
-    $('#download').click(function(){
-        generatePDF();
-    });
-
     $('#rulesBtn').click(function(){
         $(this).hide();
         $('#iframe').show();
@@ -89,7 +85,7 @@ function generatePDF() {
         },
         function(dispose) {
             if (mountName.length > 1) {
-                pdf.save(name + ".pdf");
+                pdf.save(mountName + ".pdf").replace(" ", "");
             }
             else {
                 pdf.save("UntitledMount.pdf")
