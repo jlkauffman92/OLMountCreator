@@ -6,7 +6,13 @@ $(document).ready(function(){
         $('#output').show();
 
         var name = $('input[name="name"]').val();
-        $('#name').html(" " + name);
+        if (name.length > 1){
+            $('#name').html(" " + name);
+        }
+        else{
+            $('#name').html(" Untitled Mount");
+        }
+
 
         var wl = $('input[name="wl"]').val();
         $('#wl').html(" " + wl);
@@ -57,6 +63,7 @@ $(document).ready(function(){
 
 function generatePDF() {
     var pdf = new jsPDF('p', 'pt', 'a4');
+    var mountName = $('input[name="name"]').val();
     var margins = {
         top: 40,
         bottom: 60,
@@ -70,7 +77,13 @@ function generatePDF() {
             width: margins.width
         },
         function(dispose) {
-            pdf.save($('input[name="name"]').val() + ".pdf");
+            if (mountName.length > 1) {
+                pdf.save(name + ".pdf");
+            }
+            else {
+                pdf.save("UntitledMount.pdf")
+            }
+
         },
         margins
     );
