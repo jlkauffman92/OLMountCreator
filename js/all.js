@@ -43,7 +43,7 @@ $(document).ready(function(){
         $('#dt').html(" " + dt);
 
         var guard = $('input[name="guard"]').val();
-        if(guard > -1){
+        if(guard > 0){
             $('#guard').html(" " + guard);
         }
         else {
@@ -51,7 +51,7 @@ $(document).ready(function(){
         }
 
         var toughness = $('input[name="toughness"]').val();
-        if(toughness > -1){
+        if(toughness > 0){
             $('#toughness').html(" " + toughness);
         }
         else{
@@ -59,7 +59,7 @@ $(document).ready(function(){
         }
 
         var resolve = $('input[name="resolve"]').val();
-        if(resolve > -1){
+        if(resolve > 0){
             $('#resolve').html(" " + resolve);
         }
         else{
