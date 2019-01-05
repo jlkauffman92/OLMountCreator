@@ -27,8 +27,20 @@ $(document).ready(function(){
         var speed = $('input[name="speed"]').val();
         $('#speed').html(" " + speed);
 
-        var properties = $('input[name="properties"]').val();
-        $('#properties').html(" " + properties);
+        $('#properties').html('');
+        $('input[type="checkbox"]').each(function(){
+            var checkbox = $(this);
+            var cLabel = $(this).next('span').html();
+
+            if(checkbox.is(':checked')){
+                if( $('#properties').html().length < 1){
+                    $('#properties').append(cLabel);
+                }
+                else {
+                    $('#properties').append(","+cLabel);
+                }
+            }
+        });
 
         var attributes = $('input[name="attributes"]').val();
         $('#attributes').html(" " + attributes);
