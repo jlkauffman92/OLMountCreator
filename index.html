@@ -24,16 +24,37 @@
                     <input class="form-control" type="number" name="wl">
                     <label for="speed">Speed(ft):</label>
                     <input class="form-control" type="number" name="speed">
-                    <label for="properties">Properties:</label>
-                    <div name="properties">
+                    <div><label for="properties"><a href="#" id="propTitle">Show Properties</a></label></div>
+                    <div id="propertiesForm">
                         <input type="checkbox"><span> Faster Than Light</span> <br>
                         <input type="checkbox"><span> Guided Weapons</span><br>
                         <input type="checkbox"><span> Multi-Pilot</span><br>
                         <input type="checkbox"><span> Independant</span><br>
                         <input type="checkbox"><span> Targeted Weapons</span><br>
                     </div>
-                    <label for="attributes">Attributes:</label>
-                    <input class="form-control" type="text" name="attributes">
+                    <div><label for="attributes"><a href="#" id="attTitle"> Show Attributes</a></label></div>
+                    <div id="attributesForm" class="row">
+                        <div class="col-sm-4">
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Agility </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Fortitude </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Might </span><input class="form-control attNumber" type="number"></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Learning </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Logic </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Perseption </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Will </span><input class="form-control attNumber" type="number"></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Alteration </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Creation </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Energy </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Entropy </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Movement </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Prescience </span><input class="form-control attNumber" type="number"></div>
+                            <div class="singleAtt"><input type="checkbox"><span class="attName"> Protection </span><input class="form-control attNumber" type="number"></div>
+                        </div>
+                    </div>
                     <label for="feats">Feats (<a href="https://openlegend.heromuster.com/feats" target="_blank">See list of feats</a>):</label>
                     <input class="form-control" type="text" name="feats">
                     <label for="hp">HP:</label>

@@ -1,9 +1,36 @@
 $(document).ready(function(){
+    $('#attributesForm').hide();
     $('#rulesBtn').click(function(){
         $(this).hide();
         $('#iframe').show();
 
     });
+    var hidden = true;
+    $('#attTitle').click(function(){
+        if (hidden){
+            $('#attributesForm').show();
+            hidden = false;
+            $(this).html('Hide Attributes');
+        }
+        else{
+            $('#attributesForm').hide();
+            hidden = true;
+            $(this).html('Show Attributes');
+        }
+    });
+    var propHidden = true;
+    $('#propTitle').click(function(){
+        if(propHidden){
+            $('#propertiesForm').show();
+            propHidden = false;
+            $(this).html('Hide Properties');
+        }
+        else{
+            $('#propertiesForm').hide();
+            propHidden = true;
+            $(this).html('Show Properties');
+        }
+    })
 
     $('#hide').click(function(){
         $('#iframe').hide();
@@ -28,7 +55,7 @@ $(document).ready(function(){
         $('#speed').html(" " + speed);
 
         $('#properties').html('');
-        $('input[type="checkbox"]').each(function(){
+        $('#propertiesForm').children('input[type="checkbox"]').each(function(){
             var checkbox = $(this);
             var cLabel = $(this).next('span').html();
 
@@ -42,8 +69,39 @@ $(document).ready(function(){
             }
         });
 
-        var attributes = $('input[name="attributes"]').val();
-        $('#attributes').html(" " + attributes);
+        
+        $('#attributes').html('');
+        $('#attributesForm').children().children().children('input[type="checkbox"]').each(function(){
+            var checkbox = $(this);
+            var cLabel = $.trim($(this).next('span').html());
+            var cNum = $(this).next().next('input[type="number"]');
+            var attrNum;
+            if (cNum.val() > 0){
+                attrNum = cNum.val();
+            }
+            else{
+                attrNum = 0;
+            }
+            var attrPretty = cLabel + " " + attrNum.toString();
+
+            if(checkbox.is(':checked')){
+                cNum.show();
+                cNum.css('width', '60px');
+                if ($('#attributes').html().length < 1){
+                    $('#attributes').append(" " + attrPretty);
+                }
+                else{
+                    $('#attributes').append(', '+attrPretty); 
+                }
+            }
+            else{
+                cNum.css('width', '0px');
+                setTimeout(function(){
+                    cNum.hide();
+                },80);
+            }
+
+        })
 
         var feats = $('input[name="feats"]').val();
         $('#feats').html(" " + feats);

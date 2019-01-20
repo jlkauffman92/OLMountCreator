@@ -1,0 +1,29 @@
+/* input[type=number]{
+    width: 80px;
+} */
+.attNumber{
+    display: none;
+    width: 0px;
+    /* float: right; */
+    transition: 100ms;
+    -moz-transition: 100ms;
+    -webkit-transition: 100ms;
+}
+.singleAtt{
+    overflow: hidden;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+.attName{
+    overflow: hidden;
+    display: inline-flex;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center;
+}
+#attributesForm{
+}
+#propertiesForm{
+    display: none;
+}
