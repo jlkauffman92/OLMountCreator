@@ -8,16 +8,18 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
+                <div class="col-lg">
                 <h2>Open Legened Vehicle/Mount Creator</h2>
-                <div>
+                <p>
                     For information about mounts and vehicles, see the very bottom of <a href="https://openlegendrpg.com/core-rules/09-special-equipment#mounts-vehicles" target="_blank">Chapter 9 of the Core Rules.</a>
-                </div>
+                </p>
                 <br/>
+                </div>
             </div>
         <div class="row">
-            <div id="form" class="col-sm-6 form-group">
+            <div id="form" class="col-lg form-group">
                     <label for="name">Vehicle or Mount Name:</label>
                     <input class="form-control" type="text" name="name">
                     <label for="wl">WL:</label>
@@ -32,7 +34,7 @@
                         <input type="checkbox"><span> Independant</span><br>
                         <input type="checkbox"><span> Targeted Weapons</span><br>
                     </div>
-                    <div><label for="attributes"><a href="#" id="attTitle"> Show Attributes</a></label></div>
+                    <div class="attBtn"><label for="attributes"><a href="#" id="attTitle"> Show Attributes</a></label></div>
                     <div id="attributesForm" class="row">
                         <div class="col-sm-4">
                             <div class="singleAtt"><input type="checkbox"><span class="attName"> Agility </span><input class="form-control attNumber" type="number"></div>
@@ -71,9 +73,9 @@
                     <label for="notes">Notes/Description:</label>
                     <textarea class="form-control" name="notes" rows="4" cols="50"></textarea>
             </div>
-            <div class="col-sm-6">
+            <div class="col-lg">
                 <div id="output">
-                    <div><strong><span id='name'>Untitled Mount</span></strong></div>
+                    <div class="pdfTitle"><strong><span id='name'>Untitled Mount</span></strong></div>
                     <div>Max HP:<span id='hp'></span> | Max DT:<span id='dt'></span></div>
                     <div>Current HP: _____  | Current DT:______</div>
                     <div>WL:<span id='wl'></span></div>
@@ -81,12 +83,12 @@
                     <div>Properties:<span id='properties'></span></div>
                     <div>Attributes:<span id='attributes'></span></div>
                     <div>Feats:<span id='feats'></span></div>
-                    <div><strong>Defenses</strong></div>
+                    <div class="pdfTitle"><strong>Defenses</strong></div>
                     <div>Guard:<span id='guard'></span></div>
                     <div>Toughness:<span id='toughness'></span></div>
                     <div>Resolve:<span id='resolve'></span></div>
                     <br/>
-                    <div><strong>Notes</strong></div>
+                    <div class="pdfTitle"><strong>Notes</strong></div>
                     <div id="notes"></div>
                     
                 </div>
